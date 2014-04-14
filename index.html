@@ -32,19 +32,47 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
         <h1>
-<a name="welcome-to-chimera_finder-pages" class="anchor" href="#welcome-to-chimera_finder-pages"><span class="octicon octicon-link"></span></a>Welcome to Chimera_finder Pages.</h1>
-
-<p>Short description
-Simple bash script written for Debian Unix environments</p>
+<a name="welcome-to-chimera_finder-page" class="anchor" href="#welcome-to-chimera_finder-page"><span class="octicon octicon-link"></span></a>Welcome to Chimera_finder Page</h1>
 
 <h2>
-<a name="download-and-execute" class="anchor" href="#download-and-execute"><span class="octicon octicon-link"></span></a>Download and execute</h2>
+<a name="motivations" class="anchor" href="#motivations"><span class="octicon octicon-link"></span></a>Motivations</h2>
+
+<p>Chimera_finder consist of 2 simple Bash pipelines for illumina NGS data, originally dedicated to retrieval of viral insertion sites retrieval in an host cell genome (chimeric paired end and chimeric reads). </p>
+
+<h2>
+<a name="principle" class="anchor" href="#principle"><span class="octicon octicon-link"></span></a>Principle</h2>
+
+<h3>
+<a name="chimera_finder_pairsh" class="anchor" href="#chimera_finder_pairsh"><span class="octicon octicon-link"></span></a>chimera_finder_pair.sh</h3>
+
+<p>Description of the principle</p>
+
+<h3>
+<a name="chimera_finder_singlesh" class="anchor" href="#chimera_finder_singlesh"><span class="octicon octicon-link"></span></a>chimera_finder_single.sh</h3>
+
+<p>Description of the principle</p>
+
+<h2>
+<a name="get-chimera_finder" class="anchor" href="#get-chimera_finder"><span class="octicon octicon-link"></span></a>Get Chimera_finder</h2>
+
+<h3>
+<a name="from-git-hub-repository" class="anchor" href="#from-git-hub-repository"><span class="octicon octicon-link"></span></a>From git hub repository</h3>
 
 <div class="highlight highlight-bash"><pre><span class="nv">$ </span>git clone repo_name my_folder/
 <span class="nv">$ </span><span class="nb">cd </span>my_folder/
-<span class="nv">$ </span>sudo chmod u+x path1.sh path2.sh ...
+</pre></div>
+
+<h3>
+<a name="direct-download" class="anchor" href="#direct-download"><span class="octicon octicon-link"></span></a>Direct download</h3>
+
+<p><a href="https://github.com/a-slide/Chimera_Finder/archive/master.zip">https://github.com/a-slide/Chimera_Finder/archive/master.zip</a></p>
+
+<h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a> Usage</h2>
+
+<div class="highlight highlight-bash"><pre><span class="nv">$ </span>sudo chmod u+x chimera_finder_pair.sh chimera_finder_single.sh
 <span class="nv">$ </span><span class="c"># For chimeric pairs extraction</span>
-<span class="nv">$ </span>./path1.sh
+<span class="nv">$ </span>./Chimera
 <span class="nv">$ </span><span class="c"># For chimeric splited reads extraction</span>
 <span class="nv">$ </span>./path2.sh
 </pre></div>
@@ -52,21 +80,29 @@ Simple bash script written for Debian Unix environments</p>
 <h3>
 <a name="dependencies" class="anchor" href="#dependencies"><span class="octicon octicon-link"></span></a>Dependencies:</h3>
 
+<p>The script was developed under Linux Mint 16 "petra" but is compatible with other LINUX debian based distribution. The following dependencies are required by the pipeline. Users should verify that all of these programs are added to its PATH and correspond at least to the indicated version.</p>
+
 <ul>
-<li>Sickle</li>
-<li>Bowtie2</li>
-<li>Samtoools</li>
-<li>Bedtools</li>
+<li>GNU bash, version 4.2.45(1)-release
+<a href="https://www.gnu.org/software/bash/">https://www.gnu.org/software/bash/</a>
+</li>
+<li>Sickle (v1.210)
+<a href="https://github.com/najoshi/sickle">https://github.com/najoshi/sickle</a>
+</li>
+<li>Bowtie2 (v2.1.0)
+<a href="http://bowtie-bio.sourceforge.net/bowtie2/index.shtml">http://bowtie-bio.sourceforge.net/bowtie2/index.shtml</a>
+</li>
+<li>Samtools (v0.1.19-96b5f2294a) 
+<a href="http://samtools.sourceforge.net/">http://samtools.sourceforge.net/</a>
+</li>
+<li>Bedtools (v2.17.0)
+<a href="https://github.com/arq5x/bedtools2/release">https://github.com/arq5x/bedtools2/release</a>
+</li>
 </ul><h2>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h2>
+<a name="authors-and-contact" class="anchor" href="#authors-and-contact"><span class="octicon octicon-link"></span></a>Authors and Contact</h2>
 
-<p>Adrien Leger <a href="https://github.com/a-slide" class="user-mention">@a-slide</a></p>
-
-<h2>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h2>
-
-<p>Having trouble with Pages? 
-Check out the readme file at <a href="https://github.com/a-slide/Find_chimeric_pairs_and_reads/blob/master/README.md">https://github.com/a-slide/Find_chimeric_pairs_and_reads/blob/master/README.md</a> or contact <a href="mailto:adrien.leger@inserm.fr">adrien.leger@inserm.fr</a></p>
+<p>Adrien Leger <a href="https://github.com/a-slide" class="user-mention">@a-slide</a>
+<a href="mailto:adrien.leger@inserm.fr">adrien.leger@inserm.fr</a></p>
       </section>
     </div>
 
