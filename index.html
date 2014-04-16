@@ -54,7 +54,7 @@
 <p>In order to facilitate further analyses, we first remove from dataset reads (for <strong>chimera_finder_single.sh</strong>) and read pairs (for <strong>chimera_finder_pair.sh</strong>) which map unambiguously on only one of the reference. To do so, fastq are mapped against the viral genome with the fast read aligner Bowtie2 using end to end highly stringent mapping conditions. reads/pairs with a MAPQ &gt; 30 are then removed using Samtools and a fastq dataset is regenerated with Bedtools bamtofastq. From this smaller dataset, a second round of mapping/filtering/fastq regeneration is then performed with the host cell genome.</p>
 
 <h3>
-<a name="extraction-of-chimera" class="anchor" href="#extraction-of-chimera"><span class="octicon octicon-link"></span></a>Extraction of chimera</h3>
+<a name="extraction-of-chimeras" class="anchor" href="#extraction-of-chimeras"><span class="octicon octicon-link"></span></a>Extraction of chimeras</h3>
 
 <p><strong>chimera_finder_single.sh</strong> performs a local bowtie2 alignment against a reference index mixing both viral and genomic DNA. We used a special option of Bowtie2 (-k 5) rendering the 5 best alignments instead of only one. SAM files resulting from the alignment are parsed with standard UNIX tools (grep, sort, awk, comm and join) to select reads with map in both viral and genomic DNA. </p>
 
