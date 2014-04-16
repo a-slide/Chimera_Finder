@@ -80,7 +80,7 @@
 <ul>
 <li><a href="https://github.com/a-slide/Chimera_Finder/archive/master.zip">ZIP archive</a></li>
 <li><a href="https://github.com/a-slide/Chimera_Finder/tarball/master">TAR.GZ archive</a></li>
-</ul><p>In both case, scripts must be made executable using <em>chmod</em></p>
+</ul><p>In both case, scripts must be made executable using <em>chmod</em>.</p>
 
 <div class="highlight highlight-bash"><pre><span class="nv">$ </span>sudo chmod u+x chimera_finder_pair.sh chimera_finder_single.sh
 </pre></div>
@@ -95,19 +95,25 @@
 <li>Host cell genome alone</li>
 <li>Viral and host cell genome together</li>
 </ul><div class="highlight highlight-bash"><pre><span class="nv">$ </span><span class="c"># For chimeric pairs extraction</span>
-<span class="nv">$ </span>./ chimera_finder_single.sh  <span class="o">[</span> R1.fastq<span class="o">(</span>.gz<span class="o">)</span> <span class="o">]</span> <span class="o">[</span> R2.fastq<span class="o">(</span>.gz<span class="o">)</span> <span class="o">]</span> <span class="o">[</span>output name <span class="o">]</span>  <span class="o">[</span> viral genome index<span class="o">]</span> <span class="o">[</span> host genome index<span class="o">]</span>  <span class="o">[</span> viral + host genome index<span class="o">]</span>
+<span class="nv">$ </span>./ chimera_finder_single.sh 
+<span class="nv">$ </span>  <span class="o">[</span> R1.fastq<span class="o">(</span>.gz<span class="o">)</span> <span class="o">]</span>
+<span class="nv">$ </span>  <span class="o">[</span> R2.fastq<span class="o">(</span>.gz<span class="o">)</span> <span class="o">]</span>
+<span class="nv">$ </span>  <span class="o">[</span> output name <span class="o">]</span>
+<span class="nv">$ </span>  <span class="o">[</span> viral genome index<span class="o">]</span>
+<span class="nv">$ </span>  <span class="o">[</span> host genome index<span class="o">]</span>
+<span class="nv">$ </span>  <span class="o">[</span> viral + host genome index<span class="o">]</span>
 </pre></div>
 
 <p>Fastq files containing forward reads (R1.fastq) and reverse reads (R2.fastq) can be provide as uncompressed or tarball compressed files.</p>
 
-<p>The output name will be used as a prefix for all files that will be generated during the analysis</p>
+<p>The output name will be used as a prefix for all files that will be generated during the analysis.</p>
 
-<p>The 3 indexed genomes for bowtie2 must be indicated </p>
+<p>Indexes need to be indicated as the basename of index files up to but not including the final <em>.1.bt2</em>. For example, for the viral genome indexed file in the folder <em>my_virus_index</em> are named <em>my_virus.1.bt2</em>, <em>my_virus.2.bt2</em>, <em>my_virus.3.bt2</em>, <em>my_virus.4.bt2</em>, <em>my_virus.rev.1.bt2</em>, <em>my_virus.rev.2.bt2</em>. In this situation viral genome index will be <em>path/my_virus_index/my_virus</em>.</p>
 
 <h3>
 <a name="dependencies" class="anchor" href="#dependencies"><span class="octicon octicon-link"></span></a>Dependencies:</h3>
 
-<p>The script was developed under Linux Mint 16 "petra" but is compatible with other LINUX debian based distributions. The following dependencies are required by the pipeline. Users should verify that all of these programs are added to PATH and correspond at least to the indicated version.</p>
+<p>The script was developed under Linux Mint 16 "petra" but is compatible with other LINUX debian based distributions. The following dependencies are required by the pipeline. Users should verify that all of these programs are added to PATH and correspond to the indicated or a later version.</p>
 
 <ul>
 <li>
